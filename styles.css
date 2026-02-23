@@ -1,15 +1,28 @@
-/* Custom overrides and school-style enhancements */
-
+/* Base styles - school/academic vibe */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa; /* light gray background */
+  background-color: #f8f9fa; /* light gray for notebook feel */
   color: #212529;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-weight: 700;
+  color: #0d1b2a; /* dark navy */
 }
 
+h2 {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 0.5rem;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+/* Navigation */
 .navbar {
   border-bottom: 1px solid #dee2e6;
 }
@@ -17,34 +30,136 @@ h1, h2, h3 {
 .navbar-brand {
   color: #0d6efd !important;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
+/* Cards (Algebra, Geometry, Logic) */
 .card {
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: none;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
 }
 
-.btn-outline-primary:hover,
-.btn-outline-success:hover,
-.btn-outline-warning:hover {
-  color: white;
+.card-title {
+  font-size: 1.25rem;
 }
 
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+section.mt-5 {
+  margin-top: 3rem !important;
+}
+
+/* Tools Section (Interactive Tools) */
+#toolsSection {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#toolsList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#toolsList .list-group-item {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  background: #f8f9fa;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#toolsList .list-group-item:hover {
+  background: #e9ecef;
+}
+
+#toolsList a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#toolsList a:hover {
+  text-decoration: underline;
+  color: #0a58ca;
+}
+
+/* Additional Resources */
+section ul.list-group {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.25rem;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item a {
+  color: #198754; /* green for "safe" resources */
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  color: #146c43;
+  text-decoration: underline;
+}
+
+/* Featured Interactive Example */
+.highlight {
+  background: #fff3cd; /* light yellow highlight */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #ffeaa7;
+}
+
+.highlight a.btn {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  transition: transform 0.2s;
+}
+
+.highlight a.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-  margin-top: 3rem;
+  margin-top: 4rem;
+  background: #212529;
 }
 
-/* Optional: subtle notebook/grid background (uncomment if you like) */
-/*
-body {
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
-    url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=1000');
-  background-size: cover;
-  background-attachment: fixed;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  #toolsSection,
+  .highlight {
+    padding: 1.25rem;
+  }
 }
-*/
