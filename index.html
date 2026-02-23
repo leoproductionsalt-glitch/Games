@@ -101,20 +101,20 @@
       </ul>
     </section>
 
-    <!-- Hidden wrapper – game sections stay invisible until double-click -->
+    <!-- Hidden wrapper – only shows after double-click on header -->
     <div id="hidden-tools" style="display: none;">
 
       <section id="toolsSection" class="mt-5">
         <h2>Interactive Tools</h2>
         <ul id="toolsList" class="list-group">
-          <li class="list-group-item"><a href="https://newunblockedgames.gitlab.io/" target="_blank" data-real="NUBG">Practice Set A</a></li>
-          <li class="list-group-item"><a href="https://ruihq.github.io/FNAF2/" target="_blank" data-real="FNAF 2">Logic Exercise 2</a></li>
-          <li class="list-group-item"><a href="https://history.surf/" target="_blank" data-real="All Bros Games">Strategy Collection</a></li>
-          <li class="list-group-item"><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank" data-real="BitLife (and others)">Decision Simulator</a></li>
-          <li class="list-group-item"><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank" data-real="Sandboxels">Sandbox Model</a></li>
-          <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank" data-real="Buckshot Roulette">Probability Challenge</a></li>
-          <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank" data-real="Hallow Knight">Adventure Puzzle</a></li>
-          <li class="list-group-item"><a href="https://sites.google.com/view/scholarvision/movies" target="_blank" data-real="Movies!">Media Examples</a></li>
+          <li class="list-group-item"><a href="https://newunblockedgames.gitlab.io/" target="_blank">New Unblocked Games</a></li>
+          <li class="list-group-item"><a href="https://ruihq.github.io/FNAF2/" target="_blank">FNAF 2</a></li>
+          <li class="list-group-item"><a href="https://history.surf/" target="_blank">History.surf Games</a></li>
+          <li class="list-group-item"><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife</a></li>
+          <li class="list-group-item"><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
+          <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
+          <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hollow Knight</a></li>
+          <li class="list-group-item"><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies 🍿</a></li>
         </ul>
       </section>
 
@@ -132,7 +132,7 @@
       </section>
 
       <section class="highlight mt-5 text-center">
-        <a href="https://dn.ht/picklecat/" target="_blank" class="btn btn-lg btn-warning">Featured Interactive Example</a>
+        <a href="https://dn.ht/picklecat/" target="_blank" class="btn btn-lg btn-warning">Pickle Cat</a>
       </section>
 
     </div>
@@ -146,7 +146,7 @@
     </div>
   </footer>
 
-  <!-- Reveal script: double-click on header title -->
+  <!-- Double-click reveal script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const trigger = document.getElementById('secret-trigger');
@@ -154,7 +154,7 @@
 
       trigger.addEventListener('click', () => {
         const now = new Date().getTime();
-        if (now - lastClick < 300) {
+        if (now - lastClick < 300) {  // double-click detection
           document.getElementById('hidden-tools').style.display = 'block';
           alert('Interactive tools unlocked – scroll down!');
         }
