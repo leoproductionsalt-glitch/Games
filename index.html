@@ -101,7 +101,7 @@
       </ul>
     </section>
 
-    <!-- Hidden wrapper – only shows after double-click on header -->
+    <!-- Hidden: Game sections – real names now used -->
     <div id="hidden-tools" style="display: none;">
 
       <section id="toolsSection" class="mt-5">
@@ -109,12 +109,12 @@
         <ul id="toolsList" class="list-group">
           <li class="list-group-item"><a href="https://newunblockedgames.gitlab.io/" target="_blank">New Unblocked Games</a></li>
           <li class="list-group-item"><a href="https://ruihq.github.io/FNAF2/" target="_blank">FNAF 2</a></li>
-          <li class="list-group-item"><a href="https://history.surf/" target="_blank">History.surf Games</a></li>
+          <li class="list-group-item"><a href="https://history.surf/" target="_blank">History.surf (Games Hub)</a></li>
           <li class="list-group-item"><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife</a></li>
           <li class="list-group-item"><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
           <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
           <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hollow Knight</a></li>
-          <li class="list-group-item"><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies 🍿</a></li>
+          <li class="list-group-item"><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies</a></li>
         </ul>
       </section>
 
@@ -146,7 +146,6 @@
     </div>
   </footer>
 
-  <!-- Double-click reveal script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const trigger = document.getElementById('secret-trigger');
@@ -154,7 +153,7 @@
 
       trigger.addEventListener('click', () => {
         const now = new Date().getTime();
-        if (now - lastClick < 300) {  // double-click detection
+        if (now - lastClick < 300) {
           document.getElementById('hidden-tools').style.display = 'block';
           alert('Interactive tools unlocked – scroll down!');
         }
