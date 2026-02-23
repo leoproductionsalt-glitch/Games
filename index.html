@@ -2,83 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New Tab</title>
-  <!-- Link your CSS once, make sure the file name matches -->
+  <meta name="description" content="Interactive math challenges and learning tools">
+  <title>Math Challenges</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
 <!-- LOCK SCREEN -->
 <div id="lockScreen">
-  <h2>Enter Password</h2>
-  <input type="password" id="passwordInput" placeholder="Password">
-  <button id="unlockBtn">Unlock</button>
-  <div id="resetLogin">Reset Saved Login</div>
+  <h2>Access Code Required</h2>
+  <input type="password" id="passwordInput" placeholder="Enter code">
+  <button id="unlockBtn">Enter</button>
+  <div id="resetLogin">Clear Saved Access</div>
 </div>
 
 <!-- MAIN CONTENT -->
 <div id="mainContent" class="hidden">
-
   <header>
-    <h1>Math!</h1>
+    <h1>Math Challenges</h1>
+    <p>Practice problems, simulations, and interactive exercises</p>
   </header>
 
   <section>
+    <h2>Interactive Tools</h2>
     <ul>
-      <li><a href="https://newunblockedgames.gitlab.io/" target="_blank">NUBG</a></li>
-      <li><a href="https://ruihq.github.io/FNAF2/" target="_blank">FNAF 2</a></li>
-      <li><a href="https://history.surf/" target="_blank"><strong>All</strong> Bros Games</a></li>
-      <li><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife (and others)</a></li>
-      <li><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
-      <li><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
-      <li><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hallow Knight</a></li>
-      <li><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies!</a></li>
+      <li><a href="https://newunblockedgames.gitlab.io/" target="_blank">Practice Set A</a></li>
+      <li><a href="https://ruihq.github.io/FNAF2/" target="_blank">Logic Exercise 2</a></li>
+      <li><a href="https://history.surf/" target="_blank">Strategy Collection</a></li>
+      <li><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">Decision Simulator</a></li>
+      <li><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandbox Model</a></li>
+      <li><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Probability Challenge</a></li>
+      <li><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Adventure Puzzle</a></li>
+      <li><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Media Examples</a></li>
     </ul>
   </section>
 
   <section>
-    <h2>Google Sites</h2>
+    <h2>Additional Resources</h2>
     <ul>
-      <li><a href="https://sites.google.com/classrooms.management/view/" target="_blank">Google Site 1</a></li>
-      <li><a href="https://sites.google.com/classroom.center/view/home" target="_blank">Google Site 2</a></li>
-      <li><a href="https://sites.google.com/site/unblockedgame67/home" target="_blank">Google Site 3</a></li>
-      <li><a href="https://sites.google.com/site/unblockedgamestop" target="_blank">Google Site 4</a></li>
-      <li><a href="https://sites.google.com/site/unblockedwtf/games" target="_blank">Google Site 5</a></li>
-      <li><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank">Google Site 6</a></li>
-      <li><a href="https://sites.google.com/classroom.center/view/" target="_blank">Google Site Backup</a></li>
+      <li><a href="https://sites.google.com/classrooms.management/view/" target="_blank">Resource Hub 1</a></li>
+      <li><a href="https://sites.google.com/classroom.center/view/home" target="_blank">Resource Hub 2</a></li>
+      <li><a href="https://sites.google.com/site/unblockedgame67/home" target="_blank">Resource Hub 3</a></li>
+      <li><a href="https://sites.google.com/site/unblockedgamestop" target="_blank">Resource Hub 4</a></li>
+      <li><a href="https://sites.google.com/site/unblockedwtf/games" target="_blank">Resource Hub 5</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank">Tutorial Video</a></li>
+      <li><a href="https://sites.google.com/classroom.center/view/" target="_blank">Backup Hub</a></li>
     </ul>
   </section>
 
-  <section class="pickle">
-    <a href="https://dn.ht/picklecat/" target="_blank">PICKLE CAT</a>
+  <section class="highlight">
+    <a href="https://dn.ht/picklecat/" target="_blank">Featured Interactive</a>
   </section>
 
-  <footer>Made by Leo and ChatGPT</footer>
+  <footer>Personal learning project • Leo</footer>
 </div>
 
 <script>
-const correctPassword = "leo123"; // change this
-
+const correctPassword = "leo123"; // ← change this to something stronger if possible
 const lockScreen = document.getElementById("lockScreen");
 const mainContent = document.getElementById("mainContent");
 const passwordInput = document.getElementById("passwordInput");
 const unlockBtn = document.getElementById("unlockBtn");
 
-// Check localStorage
 if (localStorage.getItem("siteUnlocked") === "true") {
   lockScreen.style.display = "none";
   mainContent.classList.remove("hidden");
 }
 
-// Unlock function
 function unlockSite() {
   if (passwordInput.value === correctPassword) {
     localStorage.setItem("siteUnlocked", "true");
     lockScreen.style.display = "none";
     mainContent.classList.remove("hidden");
   } else {
-    alert("Wrong password!");
+    alert("Incorrect code.");
   }
 }
 
@@ -87,15 +83,10 @@ passwordInput.addEventListener("keypress", function(e) {
   if (e.key === "Enter") unlockSite();
 });
 
-// Reset login
 document.getElementById("resetLogin").addEventListener("click", function() {
   localStorage.removeItem("siteUnlocked");
-  alert("Saved login cleared. Refresh page.");
+  alert("Access cleared. Please refresh.");
 });
 </script>
-
 </body>
 </html>
-
-
-
